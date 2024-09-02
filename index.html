@@ -1,8 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure Enhancement Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-<script type="text/javascript">alert('Hello World');</script>
+    <h1>トレジャー強化能力一覧計算</h1>
+    <form id="treasureForm">
+        <!-- Generate the form based on the table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>項目</th>
+                    <!-- Levels 1 to 10 -->
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>10</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 8 rows for each item -->
+                <tr>
+                    <td>弱点値上昇</td>
+                    <!-- Input fields for each level -->
+                    <td><input type="number" id="row1-level1" name="row1-level1" value="0"></td>
+                    <!-- Repeat for each level -->
+                </tr>
+                <!-- Repeat for each item -->
+            </tbody>
+        </table>
+        <button type="button" onclick="calculate()">計算する</button>
+    </form>
+    <div id="result"></div>
+    <script src="script.js"></script>
 </body>
 </html>
